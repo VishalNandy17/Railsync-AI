@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>RailSync AI — Model Results</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-left">
+    <span class="brand">RailSync AI</span>
+    <span class="brand-sub">Local demo — synthetic data</span>
+  </div>
+  <nav class="topbar-nav">
+    <a href="#overview">Overview</a>
+    <a href="#predictions">Predictions</a>
+    <a href="#schedule">Schedule</a>
+  </nav>
+  <div class="topbar-right">
+    <span id="apiStatus" class="status-pill status-pending">connecting…</span>
+  </div>
+</header>
+
+<main>
+
+  <section id="overview" class="section">
+    <h1>Criticality model results, on held-out test data</h1>
+    <p class="section-note">Every number on this page is computed from the synthetic SIH26027 demo dataset. Nothing here is Indian Railways operational data or a claim about production accuracy.</p>
+
+    <div class="stat-row" id="statRow">
+      <!-- filled by JS -->
+    </div>
+
+    <div class="panel-row">
+      <div class="panel">
+        <h2>Error by priority class</h2>
+        <p class="panel-note">Aggregate error is dominated by the majority CRITICAL class. This breaks it out per class.</p>
+        <div class="table-wrap">
+          <table id="perClassTable" class="data-table"></table>
+        </div>
+      </div>
+
+      <div class="panel">
+        <h2>Model vs. baselines</h2>
+        <p class="panel-note">Test-set MAE, lower is better.</p>
+        <div class="table-wrap">
+          <table id="baselineTable" class="data-table"></table>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel-row">
+      <div class="panel">
+        <h2>Actual vs. predicted criticality</h2>
+        <div class="chart-box"><canvas id="scatterChart"></canvas></div>
+      </div>
+      <div class="panel">
+        <h2>Top features driving criticality (SHAP)</h2>
+        <div class="chart-box"><canvas id="importanceChart"></canvas></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="predictions" class="section">
+    <h1>Test-set predictions</h1>
+    <p class="section-note">Click any row to see the SHAP explanation for that specific task.</p>
+
+    <div class="controls-row">
+      <input id="searchBox" type="text" placeholder="Filter by task ID, corridor, department…" />
+      <select id="priorityFilter">
+        <option value="">All priorities</option>
+        <option value="CRITICAL">CRITICAL</option>
+        <option value="HIGH">HIGH</option>
+        <option value="MEDIUM">MEDIUM</option>
+        <option value="LOW">LOW</option>
+      </select>
+      <span id="predictionsCount" class="controls-count"></span>
+    </div>
+
+    <div class="predictions-layout">
+      <div class="table-wrap table-wrap-tall">
+        <table id="predictionsTable" class="data-table selectable"></table>
+      </div>
+
+      <aside id="explainPanel" class="explain-panel">
+        <div class="explain-empty">Select a task to see why the model scored it that way.</div>
+      </aside>
+    </div>
+  </section>
+
+  <section id="schedule" class="section">
+    <h1>CP-SAT schedule — demo subset</h1>
+    <p class="section-note">Criticality scores feeding a constraint optimizer: corridor block-time capacity, shared crew capacity, and permit readiness as hard limits, over a 14-day planning horizon.</p>
+
+    <div class="stat-row" id="scheduleStatRow"></div>
+
+    <div class="panel">
+      <h2>Placement by day and corridor</h2>
+      <p class="panel-note">Each dot is a scheduled task, positioned by its assigned day. Unscheduled tasks (left in the backlog) are listed below.</p>
+      <div class="chart-box chart-box-wide"><canvas id="scheduleChart"></canvas></div>
+    </div>
+
+    <div class="panel">
+      <h2>Unscheduled — deferred past the 14-day horizon</h2>
+      <div class="table-wrap">
+        <table id="backlogTable" class="data-table"></table>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  RailSync AI — SIH26027 demo dashboard · advisory-only ML, hard constraints enforced by OR-Tools, final sanction by COA/human planners.
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.4/chart.umd.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

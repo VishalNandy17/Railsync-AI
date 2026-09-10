@@ -1,0 +1,230 @@
+[
+  {
+    "feature": "asset_health_index",
+    "mean_abs_shap": 2.4298887252807617
+  },
+  {
+    "feature": "safety_critical",
+    "mean_abs_shap": 1.1666573286056519
+  },
+  {
+    "feature": "train_conflict_count",
+    "mean_abs_shap": 1.0490942001342773
+  },
+  {
+    "feature": "requested_block_duration_min",
+    "mean_abs_shap": 0.9897428154945374
+  },
+  {
+    "feature": "asset_age_years",
+    "mean_abs_shap": 0.981191873550415
+  },
+  {
+    "feature": "severity",
+    "mean_abs_shap": 0.6714763045310974
+  },
+  {
+    "feature": "department_TRD",
+    "mean_abs_shap": 0.6696280837059021
+  },
+  {
+    "feature": "overdue_days",
+    "mean_abs_shap": 0.662725567817688
+  },
+  {
+    "feature": "failure_count_90d",
+    "mean_abs_shap": 0.5777932405471802
+  },
+  {
+    "feature": "single_point_failure",
+    "mean_abs_shap": 0.3137003779411316
+  },
+  {
+    "feature": "redundancy_available",
+    "mean_abs_shap": 0.28110167384147644
+  },
+  {
+    "feature": "estimated_repair_duration_min",
+    "mean_abs_shap": 0.2360457181930542
+  },
+  {
+    "feature": "traffic_density_index",
+    "mean_abs_shap": 0.19214779138565063
+  },
+  {
+    "feature": "department_Engineering",
+    "mean_abs_shap": 0.1694793552160263
+  },
+  {
+    "feature": "historical_delay_minutes",
+    "mean_abs_shap": 0.16569027304649353
+  },
+  {
+    "feature": "weather_risk",
+    "mean_abs_shap": 0.16236722469329834
+  },
+  {
+    "feature": "material_readiness_pct",
+    "mean_abs_shap": 0.0835561603307724
+  },
+  {
+    "feature": "pantograph_interaction_risk",
+    "mean_abs_shap": 0.0781284049153328
+  },
+  {
+    "feature": "contact_wire_wear_pct",
+    "mean_abs_shap": 0.050528086721897125
+  },
+  {
+    "feature": "traction_load_pct",
+    "mean_abs_shap": 0.045950550585985184
+  },
+  {
+    "feature": "dependency_count",
+    "mean_abs_shap": 0.0364411398768425
+  },
+  {
+    "feature": "daily_passenger_trains",
+    "mean_abs_shap": 0.03241732716560364
+  },
+  {
+    "feature": "nearest_available_block_hours",
+    "mean_abs_shap": 0.031214769929647446
+  },
+  {
+    "feature": "freight_forecast_24h",
+    "mean_abs_shap": 0.03082052618265152
+  },
+  {
+    "feature": "ohe_temperature_c",
+    "mean_abs_shap": 0.02878076396882534
+  },
+  {
+    "feature": "permit_ready",
+    "mean_abs_shap": 0.026746345683932304
+  },
+  {
+    "feature": "traction_power_interruptions_30d",
+    "mean_abs_shap": 0.026014849543571472
+  },
+  {
+    "feature": "asset_type_Turnout",
+    "mean_abs_shap": 0.024522723630070686
+  },
+  {
+    "feature": "daily_freight_trains",
+    "mean_abs_shap": 0.019108643755316734
+  },
+  {
+    "feature": "asset_type_Track Circuit",
+    "mean_abs_shap": 0.015704264864325523
+  },
+  {
+    "feature": "crew_count_required",
+    "mean_abs_shap": 0.014962536282837391
+  },
+  {
+    "feature": "corridor_id_C3-West",
+    "mean_abs_shap": 0.013875377364456654
+  },
+  {
+    "feature": "night_work",
+    "mean_abs_shap": 0.01240253821015358
+  },
+  {
+    "feature": "asset_type_Rail Joint",
+    "mean_abs_shap": 0.009068125858902931
+  },
+  {
+    "feature": "department_S&T",
+    "mean_abs_shap": 0.008865886367857456
+  },
+  {
+    "feature": "corridor_id_C6-Coastal",
+    "mean_abs_shap": 0.007995281368494034
+  },
+  {
+    "feature": "asset_type_Bridge Component",
+    "mean_abs_shap": 0.006359688006341457
+  },
+  {
+    "feature": "corridor_id_C5-Central",
+    "mean_abs_shap": 0.005884332116693258
+  },
+  {
+    "feature": "zone_id_Zone-C",
+    "mean_abs_shap": 0.0052607497200369835
+  },
+  {
+    "feature": "asset_type_Point Machine",
+    "mean_abs_shap": 0.005036129150539637
+  },
+  {
+    "feature": "corridor_id_C4-South",
+    "mean_abs_shap": 0.004906795918941498
+  },
+  {
+    "feature": "zone_id_Zone-A",
+    "mean_abs_shap": 0.004804720636457205
+  },
+  {
+    "feature": "zone_id_Zone-D",
+    "mean_abs_shap": 0.004513820167630911
+  },
+  {
+    "feature": "corridor_id_C1-North",
+    "mean_abs_shap": 0.004213261418044567
+  },
+  {
+    "feature": "zone_id_Zone-B",
+    "mean_abs_shap": 0.0031578317284584045
+  },
+  {
+    "feature": "asset_type_Sleeper Zone",
+    "mean_abs_shap": 0.0029893566388636827
+  },
+  {
+    "feature": "zone_id_Zone-E",
+    "mean_abs_shap": 0.002985202707350254
+  },
+  {
+    "feature": "asset_type_Axle Counter",
+    "mean_abs_shap": 0.0024832035414874554
+  },
+  {
+    "feature": "corridor_id_C2-East",
+    "mean_abs_shap": 0.002471096348017454
+  },
+  {
+    "feature": "asset_type_Section Insulator",
+    "mean_abs_shap": 0.0019158930517733097
+  },
+  {
+    "feature": "asset_type_Signal",
+    "mean_abs_shap": 0.0018238920019939542
+  },
+  {
+    "feature": "asset_type_Traction Transformer",
+    "mean_abs_shap": 0.001742788590490818
+  },
+  {
+    "feature": "asset_type_Interlocking Module",
+    "mean_abs_shap": 0.001444714842364192
+  },
+  {
+    "feature": "asset_type_Isolator",
+    "mean_abs_shap": 0.00046684531844221056
+  },
+  {
+    "feature": "asset_type_OHE Insulator",
+    "mean_abs_shap": 0.0002901119878515601
+  },
+  {
+    "feature": "asset_type_Switchgear",
+    "mean_abs_shap": 0.0002565250324551016
+  },
+  {
+    "feature": "asset_type_OHE Contact Wire",
+    "mean_abs_shap": 0.00023992358183022588
+  }
+]
