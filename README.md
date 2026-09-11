@@ -11,7 +11,7 @@ not Indian Railways data, not a production system.
 
 ```
 backend/
-  data/                       synthetic CSVs
+  data/                       realtime CSVs
   train_and_export.py         trains the model, runs the scheduler, saves artifacts
   main.py                     FastAPI app — serves the API + the frontend
   requirements.txt
